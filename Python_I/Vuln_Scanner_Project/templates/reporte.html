@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Reporte de CVEs - {{ service }}</title>
+  <style>
+    body { font-family: Inter, Arial, sans-serif; background:#f6f8fa; color:#222; padding:20px;}
+    .card { background:white; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,.06); padding:20px; margin-bottom:12px;}
+    table { width:100%; border-collapse:collapse; }
+    th, td { padding:8px 10px; border-bottom:1px solid #eee; text-align:left; }
+    th { background:#fafafa; font-weight:600; }
+    .cvss { font-weight:700; }
+    a { color:#1a73e8; text-decoration:none;}
+    .no { color:#888; font-style:italic; }
+  </style>
+</head>
+<body>
+  <h1>Reporte de CVEs</h1>
+  <p>Servicio buscado: <strong>{{ service }}</strong></p>
+
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>CVE</th>
+          <th>Descripción</th>
+          <th>CVSS</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for c in cves %}
+        <tr>
+          <td>{{ c.cve_id }}</td>
+          <td>{{ c.description }}</td>
+          <td class="cvss">{{ c.cvss }}</td>
+          <td>{% if c.url %}<a href="{{ c.url }}" target="_blank">Ver</a>{% else %}<span class="no">No disponible</span>{% endif %}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <footer><small>Generado por vuln_scanner - {{ service }}</small></footer>
+</body>
+</html>

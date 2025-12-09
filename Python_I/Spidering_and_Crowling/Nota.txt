@@ -1,0 +1,4 @@
+1 - pip install scrapy
+2 - scrapy startproject NOMBRE_DEL_PROYECTO (sitemapper por ejemplo)
+3 - Pegar el .py en CARPETA_DEL_PROYECTO/NOMBRE_DEL_PROYECTO/NOMBRE_DEL_PROYECTO/spiders
+4 - Ejecutarlo desde la carpeta 'CARPETA_DEL_PROYECTO/NOMBRE_DEL_PROYECTO/NOMBRE_DEL_PROYECTO' con el comando: scrapy crawl NOMBRE_DEL_PROYECTO

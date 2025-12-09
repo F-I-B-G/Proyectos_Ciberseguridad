@@ -1,0 +1,4 @@
+API_URL=https://services.nvd.nist.gov/rest/json/cves/2.0
+MAX_THREADS=20
+TIMEOUT=10
+RETRIES=3

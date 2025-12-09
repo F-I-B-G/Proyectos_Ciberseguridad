@@ -1,0 +1,5 @@
+ipinfo
+python-dotenv
+folium
+requests
+ipaddress

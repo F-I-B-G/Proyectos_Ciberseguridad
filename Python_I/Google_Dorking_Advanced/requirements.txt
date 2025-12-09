@@ -1,0 +1,9 @@
+python-dotenv
+googlesearch-python
+requests
+beautifulsoup4
+folium
+phonenumbers
+geopy
+tqdm
+colorama
